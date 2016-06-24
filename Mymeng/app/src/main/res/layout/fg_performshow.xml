@@ -56,12 +56,13 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <!--图片轮播-->
+            <!--图片轮播   -->
             <com.jude.rollviewpager.RollPagerView
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
@@ -164,6 +165,49 @@
                 android:layout_marginTop="@dimen/tiny_6dp" />
 
             <!--全部分类 最新 热门导航-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <!--全部分类-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.8">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/tv_fg_performshow_alltype"
+                        android:paddingLeft="@dimen/big_30dp"
+                        android:paddingRight="@dimen/small_8dp"
+                        android:text="全部分类"
+                        style="@style/NormalText"
+                        android:clickable="true"/>
+
+                    <ImageView
+                        android:layout_width="@dimen/small_12dp"
+                        android:layout_height="@dimen/small_12dp"
+                        android:rotation="90"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_list_more_arrow"/>
+                </LinearLayout>
+
+                <!--最新 热门 -->
+                <android.support.design.widget.TabLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/fg_performshow_TabLayout_newhot"
+                    android:layout_weight="1.2"
+                    app:tabMode="fixed"
+                    style="@style/MyCustomTabLayout"
+
+                    >
+
+                </android.support.design.widget.TabLayout>
+
+            </LinearLayout>
 
 
         </LinearLayout>
